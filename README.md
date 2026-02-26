@@ -96,11 +96,39 @@ claude
 
 ### Method 3: Upload to claude.ai
 
-1. Download each skill's `SKILL.md` file
-2. Go to claude.ai → Project → Project Knowledge
-3. Upload the SKILL.md files
+claude.ai 的 Project 功能可以載入這些 skills，不需要安裝 Claude Code。
 
-> **Note**: claude.ai upload only supports individual files. The full multi-agent experience works best with Claude Code.
+**步驟：**
+
+1. 從這個 repo 下載所有 `SKILL.md` 檔案（共 4 個）：
+   - `deep-research/SKILL.md`
+   - `academic-paper/SKILL.md`
+   - `academic-paper-reviewer/SKILL.md`
+   - `academic-pipeline/SKILL.md`
+
+2. 登入 [claude.ai](https://claude.ai)
+
+3. 建立新 Project：
+   - 點擊左側欄 **Projects** → **Create Project**
+   - 命名為「Academic Research」（或任意名稱）
+
+4. 上傳 SKILL.md 檔案：
+   - 進入 Project → 點擊 **Project Knowledge**（右側面板）
+   - 點擊 **Add Content** → **Upload Files**
+   - 上傳 4 個 `SKILL.md` 檔案
+
+5. （選用）上傳 reference 和 template 檔案以獲得更好效果：
+   - `deep-research/references/` 下的檔案（APA 指南、方法論模板等）
+   - `academic-paper/references/` 下的檔案（引用格式、寫作風格等）
+   - `academic-paper/templates/` 下的檔案（論文結構模板）
+
+6. 開始對話：在 Project 中開啟新對話，直接說「引導我研究 X」或「幫我寫論文」
+
+**claude.ai 限制：**
+- Project Knowledge 檔案大小上限為每個檔案 200KB
+- SKILL.md 的 YAML frontmatter 中 `version` 和 `last_updated` 必須在 `metadata:` 下，否則上傳會失敗
+- claude.ai 不支援多 agent 平行執行，效果不如 Claude Code 完整
+- 建議至少上傳 4 個 SKILL.md + 核心 references，以獲得最佳效果
 
 ---
 
