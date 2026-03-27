@@ -10,7 +10,7 @@ A comprehensive suite of Claude Code skills for academic research, covering the 
 
 > **AI is your copilot, not the pilot.** This tool won't write your paper for you. It handles the grunt work — hunting down references, formatting citations, verifying data, checking logical consistency — so you can focus on the parts that actually require your brain: defining the question, choosing the method, interpreting what the data means, and writing the sentence after "I argue that."
 >
-> Unlike a humanizer, this tool doesn't help you hide the fact that you used AI. It helps you write better. Style Calibration learns your voice from past work. AI Writing Lint catches the patterns that make prose feel machine-generated. The goal is quality, not camouflage.
+> Unlike a humanizer, this tool doesn't help you hide the fact that you used AI. It helps you write better. Style Calibration learns your voice from past work. AI Writing Lint catches the patterns that make prose feel machine-generated. The goal is quality, not cheating.
 
 ---
 
