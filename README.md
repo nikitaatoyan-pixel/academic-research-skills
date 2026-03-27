@@ -8,7 +8,9 @@
 
 A comprehensive suite of Claude Code skills for academic research, covering the full pipeline from research to publication.
 
-> **AI is your copilot, not the pilot.** This skill amplifies your research capability without replacing your judgment. Infrastructure is automated — literature search, citation formatting, reference verification, consistency checks. Decisions remain yours — defining the research question, choosing methodology, interpreting data, drawing conclusions. Style Calibration learns your writing voice so the output sounds like you, not like a language model. This is personalization, not humanization.
+> **AI is your copilot, not the pilot.** This tool won't write your paper for you. It handles the grunt work — hunting down references, formatting citations, verifying data, checking logical consistency — so you can focus on the parts that actually require your brain: defining the question, choosing the method, interpreting what the data means, and writing the sentence after "I argue that."
+>
+> Unlike a humanizer, this tool doesn't help you hide the fact that you used AI. It helps you write better. Style Calibration learns your voice from past work. AI Writing Lint catches the patterns that make prose feel machine-generated. The goal is quality, not camouflage.
 
 ---
 
