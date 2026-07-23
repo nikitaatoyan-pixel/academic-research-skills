@@ -6,7 +6,7 @@
 
 [繁體中文版](README.zh-TW.md)
 
-A comprehensive suite of Claude Code skills for academic research, covering the full pipeline from research to publication.
+Your personal assistant who works while you're offline — a comprehensive suite of Claude Code skills for academic research, covering the full pipeline from research to publication.
 
 > **AI is your copilot, not the pilot.** This tool won't write your paper for you. It handles the grunt work — hunting down references, formatting citations, verifying data, checking logical consistency — so you can focus on the parts that actually require your brain: defining the question, choosing the method, interpreting what the data means, and writing the sentence after "I argue that."
 >
