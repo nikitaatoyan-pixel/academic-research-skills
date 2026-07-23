@@ -14,243 +14,235 @@
   @media (prefers-color-scheme: dark) {
     .bg { background-color:#f2f3f5 !important; }
     .card { background-color:#ffffff !important; }
-    .ink { color:#0d0e12 !important; }
-    .ink-soft { color:#5a6373 !important; }
   }
   [data-ogsb] .bg { background-color:#f2f3f5 !important; }
-  [data-ogsc] .ink { color:#0d0e12 !important; }
-  [data-ogsc] .ink-soft { color:#5a6373 !important; }
   @media only screen and (max-width:600px) {
     .container { width:100% !important; }
-    .headline { font-size:18px !important; padding:10px 16px !important; }
+    .headline { font-size:17px !important; padding:9px 16px !important; }
     .pad { padding-left:18px !important; padding-right:18px !important; }
-    .uptime-line { font-size:19px !important; white-space:normal !important; }
-    .subtext { font-size:17px !important; }
-    .spec-title { font-size:17px !important; }
-    .spec-desc { font-size:16px !important; }
-    .cta-btn { font-size:18px !important; padding:14px 26px !important; }
-    .footer-msg { font-size:17px !important; }
+    .spec-title { font-size:16px !important; }
+    .spec-desc { font-size:15px !important; }
+    .cta-btn { font-size:17px !important; padding:13px 26px !important; }
   }
 </style>
 </head>
 <body style="margin:0; padding:0; background-color:#f2f3f5;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="dotbg bg" bgcolor="#f2f3f5" style="background-color:#f2f3f5;">
 <tr>
-<td align="center" style="padding:24px 16px;">
+<td align="center" style="padding:28px 16px 0 16px;">
 
-<table role="presentation" class="container card" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="max-width:600px; background-color:#ffffff; border-radius:20px; overflow:hidden; border:1px solid #e6e8ec; box-shadow:0 1px 3px rgba(10,12,20,0.08);">
+  <!-- ===================== BLOCK 1: Logo + Headline ===================== -->
+  <table role="presentation" class="container card" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="max-width:600px; background-color:#ffffff; border-radius:20px; overflow:hidden; border:1px solid #e6e8ec; box-shadow:0 1px 3px rgba(10,12,20,0.08);">
 
-  <!-- Logo — bigger -->
-  <tr>
-    <td class="card" align="center" style="padding:0; background-color:#ffffff; border-bottom:1px solid #e6e8ec;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding:20px 32px;">
-        <tr>
-          <td width="56" style="font-family:'Courier New', Courier, monospace; font-size:15px; font-weight:700; color:#9aa3b5;">[01]</td>
-          <td align="center">
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="background-color:#0d0e12; border-radius:999px;">
-              <tr>
-                <td style="padding:12px 28px;">
-                  <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a621fae64e655de655e3720_6985eb9279cafba183ffa498_Atomic%20Bot%20Logo%20(full)%201.png" width="220" height="40" alt="Atomic Bot" style="display:inline-block; vertical-align:middle; border:0; outline:none; width:220px; height:40px; max-width:220px;">
-                </td>
-              </tr>
-            </table>
-          </td>
-          <td width="56" align="right" style="font-family:'Courier New', Courier, monospace; font-size:15px; font-weight:700; color:#9aa3b5;">&gt;_</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
+    <!-- Logo -->
+    <tr>
+      <td align="center" style="padding:24px 32px 20px 32px; border-bottom:1px solid #e6e8ec;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="background-color:#0d0e12; border-radius:999px; margin:0 auto;">
+          <tr>
+            <td style="padding:12px 28px;">
+              <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a621fae64e655de655e3720_6985eb9279cafba183ffa498_Atomic%20Bot%20Logo%20(full)%201.png" width="220" height="40" alt="Atomic Bot" style="display:block; border:0; outline:none; width:220px; height:40px;">
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
 
-  <!-- Headline — smaller pill -->
-  <tr>
-    <td class="pad" align="center" style="padding:20px 40px 0 40px;">
-      <span class="headline" style="display:inline-block; padding:10px 22px; border-radius:999px; border:2px solid #0d0e12; color:#0d0e12; font-family:'Poppins', 'Century Gothic', 'Futura', Arial, sans-serif; font-size:19px; letter-spacing:0.2px; font-weight:700;">
-        YOUR AGENT IS WAITING FOR YOU
-      </span>
-    </td>
-  </tr>
+    <!-- Headline + subtext -->
+    <tr>
+      <td align="center" style="padding:28px 40px 32px 40px;">
+        <span class="headline" style="display:inline-block; padding:10px 22px; border-radius:999px; border:2px solid #0d0e12; color:#0d0e12; font-family:'Poppins', Arial, sans-serif; font-size:19px; letter-spacing:0.2px; font-weight:700;">
+          YOUR AGENT IS WAITING FOR YOU
+        </span>
+        <p style="margin:14px 0 0 0; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:1.55; color:#5a6373; text-align:center;">
+          Here's only some <a href="https://atomicbot.ai/#features" target="_blank" style="color:#5a6373; text-decoration:underline;">features</a> you get with your 24/7 agents.
+        </p>
+      </td>
+    </tr>
 
-  <tr>
-    <td class="pad subtext" align="center" style="padding:10px 50px 0 50px; font-family:Arial, Helvetica, sans-serif; font-size:17px; line-height:1.5; color:#5a6373;">
-      Here's only some <a href="https://atomicbot.ai/#features" target="_blank" style="color:#5a6373; text-decoration:underline;">features</a> you get with your 24/7 agents.
-    </td>
-  </tr>
+  </table>
+  <!-- /BLOCK 1 -->
 
-  <!-- Divider -->
-  <tr>
-    <td class="pad" style="padding:18px 40px 0 40px;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr><td style="border-top:1px solid #e6e8ec; font-size:0; line-height:0;">&nbsp;</td></tr>
-      </table>
-    </td>
-  </tr>
+  <!-- gap -->
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;"><tr><td style="height:12px; font-size:0; line-height:0;">&nbsp;</td></tr></table>
 
-  <!-- Specs list -->
-  <tr>
-    <td class="pad" style="padding:0 40px 0 40px; font-family:'Courier New', Courier, monospace; font-size:13px; font-weight:700; color:#9aa3b5;">[02]</td>
-  </tr>
-  <tr>
-    <td class="pad" style="padding:4px 40px 0 40px;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+  <!-- ===================== BLOCK 2: Features ===================== -->
+  <table role="presentation" class="container card" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="max-width:600px; background-color:#ffffff; border-radius:20px; overflow:hidden; border:1px solid #e6e8ec; box-shadow:0 1px 3px rgba(10,12,20,0.08);">
 
-        <!-- Bring your own keys — italic line removed -->
-        <tr>
-          <td style="padding:16px 0; border-bottom:1px solid #e6e8ec; font-family:Arial, Helvetica, sans-serif;">
-            <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background-color:#D6FF3D; margin-right:9px; vertical-align:middle;">&nbsp;</span><span class="spec-title" style="font-size:17px; font-weight:700; color:#0d0e12;">Bring your own keys</span><br>
-            <span class="spec-desc" style="font-size:16px; line-height:1.55; color:#5a6373;">Claude, GPT, Gemini, and more. No lock-in, no black box.</span>
-          </td>
-        </tr>
+    <tr>
+      <td style="padding:6px 36px 0 36px; font-family:'Courier New', Courier, monospace; font-size:13px; font-weight:700; color:#9aa3b5;">[02]</td>
+    </tr>
+    <tr>
+      <td style="padding:4px 36px 8px 36px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
 
-        <tr>
-          <td style="padding:16px 0; border-bottom:1px solid #e6e8ec; font-family:Arial, Helvetica, sans-serif;">
-            <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background-color:#D6FF3D; margin-right:9px; vertical-align:middle;">&nbsp;</span><span class="spec-title" style="font-size:17px; font-weight:700; color:#0d0e12;">100+ Connectors</span><br>
-            <span class="spec-desc" style="font-size:16px; line-height:1.55; color:#5a6373;">Gmail, Slack, Notion, GitHub, Stripe and more &mdash; wire up your stack in one click.</span>
-          </td>
-        </tr>
+          <tr>
+            <td class="spec-row" style="padding:16px 0; border-bottom:1px solid #e6e8ec; font-family:Arial, Helvetica, sans-serif;">
+              <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background-color:#D6FF3D; margin-right:8px; vertical-align:middle;">&nbsp;</span><span class="spec-title" style="font-size:16px; font-weight:700; color:#0d0e12;">Bring your own keys</span><br>
+              <span class="spec-desc" style="font-size:15px; line-height:1.55; color:#5a6373;">Claude, GPT, Gemini, and more. No lock-in, no black box.</span>
+            </td>
+          </tr>
 
-        <!-- "Scheduled tasks..." → replaced -->
-        <tr>
-          <td style="padding:16px 0; border-bottom:1px solid #e6e8ec; font-family:Arial, Helvetica, sans-serif;">
-            <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background-color:#D6FF3D; margin-right:9px; vertical-align:middle;">&nbsp;</span><span class="spec-title" style="font-size:17px; font-weight:700; color:#0d0e12;">Runs 24/7</span><br>
-            <span class="spec-desc" style="font-size:16px; line-height:1.55; color:#5a6373;">Your personal assistant who works while you're offline.</span>
-          </td>
-        </tr>
+          <tr>
+            <td style="padding:16px 0; border-bottom:1px solid #e6e8ec; font-family:Arial, Helvetica, sans-serif;">
+              <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background-color:#D6FF3D; margin-right:8px; vertical-align:middle;">&nbsp;</span><span class="spec-title" style="font-size:16px; font-weight:700; color:#0d0e12;">100+ Connectors</span><br>
+              <span class="spec-desc" style="font-size:15px; line-height:1.55; color:#5a6373;">Gmail, Slack, Notion, GitHub, Stripe and more &mdash; wire up your stack in one click.</span>
+            </td>
+          </tr>
 
-        <!-- "Spin up" → "Launch" -->
-        <tr>
-          <td style="padding:16px 0; font-family:Arial, Helvetica, sans-serif;">
-            <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background-color:#D6FF3D; margin-right:9px; vertical-align:middle;">&nbsp;</span><span class="spec-title" style="font-size:17px; font-weight:700; color:#0d0e12;">Countless agents, one account</span><br>
-            <span class="spec-desc" style="font-size:16px; line-height:1.55; color:#5a6373;">Launch as many as you need, each with its own task and memory.</span>
-          </td>
-        </tr>
+          <tr>
+            <td style="padding:16px 0; border-bottom:1px solid #e6e8ec; font-family:Arial, Helvetica, sans-serif;">
+              <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background-color:#D6FF3D; margin-right:8px; vertical-align:middle;">&nbsp;</span><span class="spec-title" style="font-size:16px; font-weight:700; color:#0d0e12;">Runs 24/7</span><br>
+              <span class="spec-desc" style="font-size:15px; line-height:1.55; color:#5a6373;">Your personal assistant who works while you're offline.</span>
+            </td>
+          </tr>
 
-      </table>
-    </td>
-  </tr>
+          <tr>
+            <td style="padding:16px 0; font-family:Arial, Helvetica, sans-serif;">
+              <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background-color:#D6FF3D; margin-right:8px; vertical-align:middle;">&nbsp;</span><span class="spec-title" style="font-size:16px; font-weight:700; color:#0d0e12;">Countless agents, one account</span><br>
+              <span class="spec-desc" style="font-size:15px; line-height:1.55; color:#5a6373;">Launch as many as you need, each with its own task and memory.</span>
+            </td>
+          </tr>
 
-  <!-- Cloud push panel -->
-  <tr>
-    <td align="center" style="padding:20px 40px 0 40px;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="background-color:#D6FF3D; border-radius:14px; margin:0 auto;">
-        <tr>
-          <td align="center" style="padding:26px 24px 22px 24px; font-family:Arial, Helvetica, sans-serif; text-align:center;">
+        </table>
+      </td>
+    </tr>
 
-            <p style="margin:0 0 16px 0; font-size:20px; font-weight:800; color:#0d0e12; font-family:Arial, Helvetica, sans-serif; text-align:center;">
-              Start your first Agent
-            </p>
+  </table>
+  <!-- /BLOCK 2 -->
 
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 14px auto;">
-              <tr>
-                <td align="center" bgcolor="#ffffff" style="border-radius:999px;">
-                  <a href="https://api.atomicbot.ai/auth/google" target="_blank" class="cta-btn" style="display:block; background-color:#ffffff; color:#0d0e12; font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:800; text-decoration:none; padding:14px 34px; border-radius:999px; white-space:nowrap;">
-                    Run in Cloud &nbsp;&rarr;
-                  </a>
-                </td>
-              </tr>
-            </table>
+  <!-- gap -->
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;"><tr><td style="height:12px; font-size:0; line-height:0;">&nbsp;</td></tr></table>
 
-            <p style="margin:0; font-size:16px; color:#2c3410; font-family:Arial, Helvetica, sans-serif; text-align:center;">
-              Ask us everything &nbsp;&mdash;&nbsp; <a href="mailto:support@atomicbot.ai" style="color:#0d0e12; text-decoration:underline;">support@atomicbot.ai</a>
-            </p>
+  <!-- ===================== BLOCK 3: CTA ===================== -->
+  <table role="presentation" class="container card" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="max-width:600px; background-color:#ffffff; border-radius:20px; overflow:hidden; border:1px solid #e6e8ec; box-shadow:0 1px 3px rgba(10,12,20,0.08);">
 
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
+    <tr>
+      <td align="center" style="padding:24px 32px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="background-color:#D6FF3D; border-radius:14px; margin:0 auto;">
+          <tr>
+            <td align="center" style="padding:26px 24px 22px 24px; text-align:center;">
 
-  <tr>
-    <td align="center" style="padding:16px 40px 20px 40px; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#0d0e12;">
-      Best regards,<br><span style="font-weight:700;">The Atomic Bot Team</span>
-    </td>
-  </tr>
+              <p style="margin:0 0 16px 0; font-size:20px; font-weight:800; color:#0d0e12; font-family:Arial, Helvetica, sans-serif; text-align:center;">
+                Start your first Agent
+              </p>
 
-  <!-- Divider -->
-  <tr>
-    <td class="pad" style="padding:0 40px;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr><td style="border-top:1px solid #e6e8ec; font-size:0; line-height:0;">&nbsp;</td></tr>
-      </table>
-    </td>
-  </tr>
-
-  <!-- Social row -->
-  <tr>
-    <td align="center" style="padding:14px 40px 0 40px; font-family:'Courier New', Courier, monospace; font-size:13px; font-weight:700; color:#9aa3b5;">[03]</td>
-  </tr>
-  <tr>
-    <td align="center" style="padding:6px 40px 12px 40px;">
-      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td style="padding:0 6px;">
-            <a href="https://x.com/atomicbot_ai" target="_blank" style="text-decoration:none;">
-              <table role="presentation" width="38" height="38" cellpadding="0" cellspacing="0" border="0" style="width:38px; height:38px; background-color:#242424; border-radius:50%;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 14px auto;">
                 <tr>
-                  <td align="center" valign="middle" style="text-align:center; vertical-align:middle;">
-                    <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281c1d056f9d576801e6_prime_twitter.png" width="18" height="18" alt="X" style="display:inline-block; vertical-align:middle; border:0; outline:none;">
+                  <td align="center" bgcolor="#ffffff" style="border-radius:999px;">
+                    <a href="https://api.atomicbot.ai/auth/google" target="_blank" class="cta-btn" style="display:block; background-color:#ffffff; color:#0d0e12; font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:800; text-decoration:none; padding:14px 34px; border-radius:999px; white-space:nowrap;">
+                      Run in Cloud &nbsp;&rarr;
+                    </a>
                   </td>
                 </tr>
               </table>
-            </a>
-          </td>
-          <td style="padding:0 6px;">
-            <a href="https://discord.gg/2TXafRV69m" target="_blank" style="text-decoration:none;">
-              <table role="presentation" width="38" height="38" cellpadding="0" cellspacing="0" border="0" style="width:38px; height:38px; background-color:#242424; border-radius:50%;">
-                <tr>
-                  <td align="center" valign="middle" style="text-align:center; vertical-align:middle;">
-                    <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281cc752613eb179acad_ic_baseline-discord.png" width="18" height="18" alt="Discord" style="display:inline-block; vertical-align:middle; border:0; outline:none;">
-                  </td>
-                </tr>
-              </table>
-            </a>
-          </td>
-          <td style="padding:0 6px;">
-            <a href="https://github.com/AtomicBot-ai/atomic-agent" target="_blank" style="text-decoration:none;">
-              <table role="presentation" width="38" height="38" cellpadding="0" cellspacing="0" border="0" style="width:38px; height:38px; background-color:#242424; border-radius:50%;">
-                <tr>
-                  <td align="center" valign="middle" style="text-align:center; vertical-align:middle;">
-                    <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281c22bea3995542b7e7_mdi_github.png" width="18" height="18" alt="GitHub" style="display:inline-block; vertical-align:middle; border:0; outline:none;">
-                  </td>
-                </tr>
-              </table>
-            </a>
-          </td>
-          <td style="padding:0 6px;">
-            <a href="https://www.linkedin.com/company/atomicbot/" target="_blank" style="text-decoration:none;">
-              <table role="presentation" width="38" height="38" cellpadding="0" cellspacing="0" border="0" style="width:38px; height:38px; background-color:#242424; border-radius:50%;">
-                <tr>
-                  <td align="center" valign="middle" style="text-align:center; vertical-align:middle;">
-                    <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281c22bea3995542b7ec_mdi_linkedin.png" width="18" height="18" alt="LinkedIn" style="display:inline-block; vertical-align:middle; border:0; outline:none;">
-                  </td>
-                </tr>
-              </table>
-            </a>
-          </td>
-          <td style="padding:0 6px;">
-            <a href="https://www.facebook.com/people/Atomic-Bot-AI/61587265870765/" target="_blank" style="text-decoration:none;">
-              <table role="presentation" width="38" height="38" cellpadding="0" cellspacing="0" border="0" style="width:38px; height:38px; background-color:#242424; border-radius:50%;">
-                <tr>
-                  <td align="center" valign="middle" style="text-align:center; vertical-align:middle;">
-                    <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281c8bdedd1085a9429e_ic_baseline-facebook.png" width="18" height="18" alt="Facebook" style="display:inline-block; vertical-align:middle; border:0; outline:none;">
-                  </td>
-                </tr>
-              </table>
-            </a>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
 
-  <tr>
-    <td align="center" style="padding:0 40px 22px 40px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#5c5c5c;">
-      <a href="https://atomicbot.ai/terms-of-service" target="_blank" style="color:#5c5c5c; text-decoration:underline;">Terms of Service</a>
-      &nbsp;&middot;&nbsp;
-      <a href="#" target="_blank" style="color:#5c5c5c; text-decoration:underline;">Unsubscribe</a>
-    </td>
-  </tr>
+              <p style="margin:0; font-size:16px; color:#2c3410; font-family:Arial, Helvetica, sans-serif; text-align:center;">
+                Ask us everything &nbsp;&mdash;&nbsp; <a href="mailto:support@atomicbot.ai" style="color:#0d0e12; text-decoration:underline;">support@atomicbot.ai</a>
+              </p>
 
-</table>
+            </td>
+          </tr>
+        </table>
+
+        <p style="margin:20px 0 0 0; font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#0d0e12; text-align:center;">
+          Best regards,<br><strong>The Atomic Bot Team</strong>
+        </p>
+      </td>
+    </tr>
+
+  </table>
+  <!-- /BLOCK 3 -->
+
+  <!-- ===================== FOOTER (outside blocks) ===================== -->
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;">
+
+    <tr>
+      <td align="center" style="padding:24px 32px 8px 32px; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:1.6; color:#9aa3b5; text-align:center;">
+        Questions or feedback? Join our <a href="https://discord.gg/2TXafRV69m" target="_blank" style="color:#9aa3b5; text-decoration:underline;">Discord</a> or email <a href="mailto:support@atomicbot.ai" style="color:#9aa3b5; text-decoration:underline;">support@atomicbot.ai</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center" style="padding:0 32px 16px 32px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#9aa3b5; text-align:center;">
+        Built by the Atomic Bot team &nbsp;&#9829;
+      </td>
+    </tr>
+
+    <!-- Social icons -->
+    <tr>
+      <td align="center" style="padding:4px 32px 12px 32px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+          <tr>
+            <td style="padding:0 5px;">
+              <a href="https://x.com/atomicbot_ai" target="_blank" style="text-decoration:none;">
+                <table role="presentation" width="36" height="36" cellpadding="0" cellspacing="0" border="0" style="width:36px; height:36px; background-color:#242424; border-radius:50%;">
+                  <tr>
+                    <td align="center" valign="middle" bgcolor="#242424" style="text-align:center; vertical-align:middle; border-radius:50%;">
+                      <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281c1d056f9d576801e6_prime_twitter.png" width="18" height="18" alt="X" style="display:block; border:0; outline:none; margin:0 auto;">
+                    </td>
+                  </tr>
+                </table>
+              </a>
+            </td>
+            <td style="padding:0 5px;">
+              <a href="https://discord.gg/2TXafRV69m" target="_blank" style="text-decoration:none;">
+                <table role="presentation" width="36" height="36" cellpadding="0" cellspacing="0" border="0" style="width:36px; height:36px; background-color:#242424; border-radius:50%;">
+                  <tr>
+                    <td align="center" valign="middle" bgcolor="#242424" style="text-align:center; vertical-align:middle; border-radius:50%;">
+                      <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281cc752613eb179acad_ic_baseline-discord.png" width="18" height="18" alt="Discord" style="display:block; border:0; outline:none; margin:0 auto;">
+                    </td>
+                  </tr>
+                </table>
+              </a>
+            </td>
+            <td style="padding:0 5px;">
+              <a href="https://github.com/AtomicBot-ai/atomic-agent" target="_blank" style="text-decoration:none;">
+                <table role="presentation" width="36" height="36" cellpadding="0" cellspacing="0" border="0" style="width:36px; height:36px; background-color:#242424; border-radius:50%;">
+                  <tr>
+                    <td align="center" valign="middle" bgcolor="#242424" style="text-align:center; vertical-align:middle; border-radius:50%;">
+                      <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281c22bea3995542b7e7_mdi_github.png" width="18" height="18" alt="GitHub" style="display:block; border:0; outline:none; margin:0 auto;">
+                    </td>
+                  </tr>
+                </table>
+              </a>
+            </td>
+            <td style="padding:0 5px;">
+              <a href="https://www.linkedin.com/company/atomicbot/" target="_blank" style="text-decoration:none;">
+                <table role="presentation" width="36" height="36" cellpadding="0" cellspacing="0" border="0" style="width:36px; height:36px; background-color:#242424; border-radius:50%;">
+                  <tr>
+                    <td align="center" valign="middle" bgcolor="#242424" style="text-align:center; vertical-align:middle; border-radius:50%;">
+                      <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281c22bea3995542b7ec_mdi_linkedin.png" width="18" height="18" alt="LinkedIn" style="display:block; border:0; outline:none; margin:0 auto;">
+                    </td>
+                  </tr>
+                </table>
+              </a>
+            </td>
+            <td style="padding:0 5px;">
+              <a href="https://www.facebook.com/people/Atomic-Bot-AI/61587265870765/" target="_blank" style="text-decoration:none;">
+                <table role="presentation" width="36" height="36" cellpadding="0" cellspacing="0" border="0" style="width:36px; height:36px; background-color:#242424; border-radius:50%;">
+                  <tr>
+                    <td align="center" valign="middle" bgcolor="#242424" style="text-align:center; vertical-align:middle; border-radius:50%;">
+                      <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281c8bdedd1085a9429e_ic_baseline-facebook.png" width="18" height="18" alt="Facebook" style="display:block; border:0; outline:none; margin:0 auto;">
+                    </td>
+                  </tr>
+                </table>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center" style="padding:0 32px 28px 32px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#b0b7c3; text-align:center;">
+        <a href="https://atomicbot.ai/terms-of-service" target="_blank" style="color:#b0b7c3; text-decoration:underline;">Terms of Service</a>
+        &nbsp;&middot;&nbsp;
+        <a href="#" target="_blank" style="color:#b0b7c3; text-decoration:underline;">Unsubscribe</a>
+      </td>
+    </tr>
+
+  </table>
+  <!-- /FOOTER -->
 
 </td>
 </tr>
