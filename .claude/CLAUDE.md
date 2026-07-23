@@ -10,6 +10,7 @@ A suite of Claude Code skills for rigorous academic research, paper writing, pee
 | `academic-paper` v2.2 | 10-agent academic paper writing | full, plan, outline-only, revision, abstract-only, lit-review, format-convert, citation-check |
 | `academic-paper-reviewer` v1.3 | Multi-perspective paper review (5 reviewers) | full, re-review, quick, methodology-focus, guided |
 | `academic-pipeline` v2.2 | Full pipeline orchestrator | (coordinates all above) |
+| `geo` v1.0 | GEO-first SEO analysis (15 sub-skills, 5 agents) | audit, quick, citability, crawlers, llmstxt, brands, platforms, schema, technical, content, report, report-pdf, prospect, proposal, compare, update |
 
 ## Routing Rules
 
