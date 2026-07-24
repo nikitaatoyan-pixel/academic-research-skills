@@ -32,14 +32,22 @@
     [data-ogsc] .ink-soft { color:#5a6373 !important; }
     [data-ogsc] .headline { border-color:#0d0e12 !important; color:#0d0e12 !important; }
 
-    /* Gmail iOS forced dark mode ignores every opt-out, but it never repaints
-       gradient backgrounds. `u + .body` matches only inside Gmail: there we
-       paint text with a single-color gradient clipped to the glyphs, so the
-       inversion cannot recolor it. All other clients skip these rules. */
-    u + .body .ink { background-image:linear-gradient(#0d0e12,#0d0e12); -webkit-background-clip:text !important; background-clip:text !important; color:transparent !important; }
-    u + .body .ink-soft { background-image:linear-gradient(#5a6373,#5a6373); -webkit-background-clip:text !important; background-clip:text !important; color:transparent !important; }
-    u + .body .g-gray { background-image:linear-gradient(#9aa3b5,#9aa3b5); -webkit-background-clip:text !important; background-clip:text !important; color:transparent !important; }
-    u + .body .g-faint { background-image:linear-gradient(#b0b7c3,#b0b7c3); -webkit-background-clip:text !important; background-clip:text !important; color:transparent !important; }
+    /* Gmail iOS forced dark mode (emailmatrix.ru/blog/gmail-ios-dark-mode):
+       Gmail repaints plain colors but never gradients. Inside Gmail only
+       (u + .body), text is painted by a single-color gradient clipped to the
+       glyphs; the inner span carries no inline color so the rule wins. The
+       div > u + .body pair reverts the hack in Gmail Android, whose DOM
+       differs and where inversion behaves differently. */
+    @media only screen and (max-width:480px) {
+      u + .body .t-ink { background-image:linear-gradient(#0d0e12,#0d0e12); background-clip:text; color:transparent; }
+      div > u + .body .t-ink { background-image:none; background-clip:inherit; color:#0d0e12; }
+      u + .body .t-soft { background-image:linear-gradient(#5a6373,#5a6373); background-clip:text; color:transparent; }
+      div > u + .body .t-soft { background-image:none; background-clip:inherit; color:#5a6373; }
+      u + .body .t-gray { background-image:linear-gradient(#9aa3b5,#9aa3b5); background-clip:text; color:transparent; }
+      div > u + .body .t-gray { background-image:none; background-clip:inherit; color:#9aa3b5; }
+      u + .body .t-faint { background-image:linear-gradient(#b0b7c3,#b0b7c3); background-clip:text; color:transparent; }
+      div > u + .body .t-faint { background-image:none; background-clip:inherit; color:#b0b7c3; }
+    }
 
     @media only screen and (max-width:620px) {
       .container { width:100% !important; }
@@ -77,14 +85,20 @@
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:20px 0 12px; Margin:20px 0 12px;">
                       <tr>
                         <td width="50%" style="font-size:0; line-height:0;">&nbsp;</td>
-                        <td align="center" class="headline ink" style="padding:8px 18px; border-radius:999px; border:1.5px solid #0d0e12; color:#0d0e12; font-family:'Poppins',Arial,Helvetica,sans-serif; font-size:16px; letter-spacing:0.4px; font-weight:700; text-align:center; white-space:nowrap;">
-                          YOUR AGENT IS WAITING FOR YOU
+                        <td align="center" style="background:#0d0e12; background-image:linear-gradient(#0d0e12,#0d0e12); border-radius:999px; padding:2px;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td align="center" class="headline ink" bgcolor="#ffffff" style="background:#ffffff; background-image:linear-gradient(#ffffff,#ffffff); border-radius:999px; padding:8px 18px; color:#0d0e12; font-family:'Poppins',Arial,Helvetica,sans-serif; font-size:16px; letter-spacing:0.4px; font-weight:700; text-align:center; white-space:nowrap;">
+                                <span class="t-ink">YOUR AGENT IS WAITING FOR YOU</span>
+                              </td>
+                            </tr>
+                          </table>
                         </td>
                         <td width="50%" style="font-size:0; line-height:0;">&nbsp;</td>
                       </tr>
                     </table>
                     <p class="ink-soft" style="margin:0; Margin:0; font-family:Arial,Helvetica,sans-serif; font-size:18px; line-height:1.55; color:#5a6373; text-align:center;">
-                      Welcome to the AtomicBot &mdash; the easiest way to run AI agents
+                      <span class="t-soft">Welcome to the AtomicBot &mdash; the easiest way to run AI agents</span>
                     </p>
                   </td>
                 </tr>
@@ -102,7 +116,7 @@
                 <!-- Section title -->
                 <tr>
                   <td class="ink" style="padding:22px 32px 0; text-align:left; font-family:Arial,Helvetica,sans-serif; font-size:30px; font-weight:700; color:#0d0e12;">
-                    Key Features:
+                    <span class="t-ink">Key Features:</span>
                   </td>
                 </tr>
                 <!-- Feature items -->
@@ -112,35 +126,35 @@
 
                       <tr>
                         <td style="padding:14px 0; border-bottom:1px solid #e6e8ec; font-family:Arial,Helvetica,sans-serif;">
-                          <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background:#D6FF3D; margin-right:8px; vertical-align:middle;">&nbsp;</span><span class="ink" style="font-size:21px; font-weight:700; color:#0d0e12; vertical-align:middle;">Bring your own keys</span><br>
-                          <span class="ink-soft" style="font-size:20px; line-height:1.6; color:#5a6373;">Claude, GPT, Gemini, and more. No lock-in, no black box.</span>
+                          <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background:#D6FF3D; margin-right:8px; vertical-align:middle;">&nbsp;</span><span class="ink" style="font-size:21px; font-weight:700; color:#0d0e12; vertical-align:middle;"><span class="t-ink">Bring your own keys</span></span><br>
+                          <span class="ink-soft" style="font-size:20px; line-height:1.6; color:#5a6373;"><span class="t-soft">Claude, GPT, Gemini, and more. No lock-in, no black box.</span></span>
                         </td>
                       </tr>
 
                       <tr>
                         <td style="padding:14px 0; border-bottom:1px solid #e6e8ec; font-family:Arial,Helvetica,sans-serif;">
-                          <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background:#D6FF3D; margin-right:8px; vertical-align:middle;">&nbsp;</span><span class="ink" style="font-size:21px; font-weight:700; color:#0d0e12; vertical-align:middle;">100+ Connectors</span><br>
-                          <span class="ink-soft" style="font-size:20px; line-height:1.6; color:#5a6373;">Gmail, Slack, Notion, GitHub, Stripe and more &mdash; wire up your stack in one click.</span>
+                          <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background:#D6FF3D; margin-right:8px; vertical-align:middle;">&nbsp;</span><span class="ink" style="font-size:21px; font-weight:700; color:#0d0e12; vertical-align:middle;"><span class="t-ink">100+ Connectors</span></span><br>
+                          <span class="ink-soft" style="font-size:20px; line-height:1.6; color:#5a6373;"><span class="t-soft">Gmail, Slack, Notion, GitHub, Stripe and more &mdash; wire up your stack in one click.</span></span>
                         </td>
                       </tr>
 
                       <tr>
                         <td style="padding:14px 0; border-bottom:1px solid #e6e8ec; font-family:Arial,Helvetica,sans-serif;">
-                          <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background:#D6FF3D; margin-right:8px; vertical-align:middle;">&nbsp;</span><span class="ink" style="font-size:21px; font-weight:700; color:#0d0e12; vertical-align:middle;">Runs 24/7</span><br>
-                          <span class="ink-soft" style="font-size:20px; line-height:1.6; color:#5a6373;">Your personal assistant who works while you're offline.</span>
+                          <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background:#D6FF3D; margin-right:8px; vertical-align:middle;">&nbsp;</span><span class="ink" style="font-size:21px; font-weight:700; color:#0d0e12; vertical-align:middle;"><span class="t-ink">Runs 24/7</span></span><br>
+                          <span class="ink-soft" style="font-size:20px; line-height:1.6; color:#5a6373;"><span class="t-soft">Your personal assistant who works while you're offline.</span></span>
                         </td>
                       </tr>
 
                       <tr>
                         <td style="padding:14px 0; border-bottom:1px solid #e6e8ec; font-family:Arial,Helvetica,sans-serif;">
-                          <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background:#D6FF3D; margin-right:8px; vertical-align:middle;">&nbsp;</span><span class="ink" style="font-size:21px; font-weight:700; color:#0d0e12; vertical-align:middle;">Countless agents, one account</span><br>
-                          <span class="ink-soft" style="font-size:20px; line-height:1.6; color:#5a6373;">Launch as many as you need, each with its own task and memory.</span>
+                          <span style="display:inline-block; width:7px; height:7px; border-radius:2px; background:#D6FF3D; margin-right:8px; vertical-align:middle;">&nbsp;</span><span class="ink" style="font-size:21px; font-weight:700; color:#0d0e12; vertical-align:middle;"><span class="t-ink">Countless agents, one account</span></span><br>
+                          <span class="ink-soft" style="font-size:20px; line-height:1.6; color:#5a6373;"><span class="t-soft">Launch as many as you need, each with its own task and memory.</span></span>
                         </td>
                       </tr>
 
                       <tr>
                         <td align="center" style="padding:16px 0 6px; text-align:center; font-family:Arial,Helvetica,sans-serif;">
-                          <a href="https://atomicbot.ai/#features" target="_blank" class="g-faint" style="font-size:20px; color:#b0b7c3; text-decoration:underline;">More</a>
+                          <a href="https://atomicbot.ai/#features" target="_blank" class="g-faint" style="font-size:20px; color:#b0b7c3; text-decoration:underline;"><span class="t-faint">More</span></a>
                         </td>
                       </tr>
 
@@ -160,7 +174,7 @@
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td align="center" class="ink" style="padding:22px 32px 4px; font-family:Arial,Helvetica,sans-serif; font-size:27px; font-weight:800; color:#0d0e12; text-align:center;">
-                    Choose your fighter
+                    <span class="t-ink">Choose your fighter</span>
                   </td>
                 </tr>
                 <tr>
@@ -169,7 +183,7 @@
                       <tr>
                         <!-- OpenClaw -->
                         <td align="center" valign="top" width="48%" bgcolor="#f7f8fa" style="width:48%; padding:20px 12px 18px; background:#f7f8fa; background-image:linear-gradient(#f7f8fa,#f7f8fa); border-radius:12px; text-align:center;">
-                          <p class="ink" style="margin:0 0 12px; font-size:22px; line-height:1; color:#0d0e12; font-family:Arial,sans-serif; text-align:center;">&#8595;</p>
+                          <p class="ink" style="margin:0 0 12px; font-size:22px; line-height:1; color:#0d0e12; font-family:Arial,sans-serif; text-align:center;"><span class="t-ink">&#8595;</span></p>
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 12px; Margin:0 auto 12px;">
                             <tr>
                               <td align="center" style="text-align:center;">
@@ -177,13 +191,13 @@
                               </td>
                             </tr>
                           </table>
-                          <p class="ink" style="margin:0; font-size:21px; font-weight:700; color:#0d0e12; font-family:Arial,Helvetica,sans-serif; text-align:center;">OpenClaw</p>
+                          <p class="ink" style="margin:0; font-size:21px; font-weight:700; color:#0d0e12; font-family:Arial,Helvetica,sans-serif; text-align:center;"><span class="t-ink">OpenClaw</span></p>
                         </td>
                         <!-- spacer -->
                         <td width="4%" style="width:4%; font-size:0; line-height:0;">&nbsp;</td>
                         <!-- Hermes -->
                         <td align="center" valign="top" width="48%" bgcolor="#f7f8fa" style="width:48%; padding:20px 12px 18px; background:#f7f8fa; background-image:linear-gradient(#f7f8fa,#f7f8fa); border-radius:12px; text-align:center;">
-                          <p class="ink" style="margin:0 0 12px; font-size:22px; line-height:1; color:#0d0e12; font-family:Arial,sans-serif; text-align:center;">&#8595;</p>
+                          <p class="ink" style="margin:0 0 12px; font-size:22px; line-height:1; color:#0d0e12; font-family:Arial,sans-serif; text-align:center;"><span class="t-ink">&#8595;</span></p>
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 12px;">
                             <tr>
                               <td align="center" valign="middle" style="padding:12px; background-image:url('https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a622cb45daa365c1389b385_Ellipse%20121.png'); background-size:60px 60px; background-repeat:no-repeat; background-position:center;">
@@ -191,7 +205,7 @@
                               </td>
                             </tr>
                           </table>
-                          <p class="ink" style="margin:0; font-size:21px; font-weight:700; color:#0d0e12; font-family:Arial,Helvetica,sans-serif; text-align:center;">Hermes</p>
+                          <p class="ink" style="margin:0; font-size:21px; font-weight:700; color:#0d0e12; font-family:Arial,Helvetica,sans-serif; text-align:center;"><span class="t-ink">Hermes</span></p>
                         </td>
                       </tr>
                     </table>
@@ -199,7 +213,7 @@
                 </tr>
                 <tr>
                   <td align="center" class="g-gray" style="padding:10px 32px 22px; font-family:Arial,Helvetica,sans-serif; font-size:18px; color:#9aa3b5; text-align:center;">
-                    Or just choose both
+                    <span class="t-gray">Or just choose both</span>
                   </td>
                 </tr>
               </table>
@@ -219,7 +233,7 @@
                       <tr>
                         <td width="50%" style="font-size:0; line-height:0;">&nbsp;</td>
                         <td align="center" class="ink" style="font-size:30px; font-weight:800; color:#0d0e12; font-family:Arial,Helvetica,sans-serif; line-height:1.3; text-align:center; white-space:nowrap;">
-                          Start your first Agent
+                          <span class="t-ink">Start your first Agent</span>
                         </td>
                         <td width="50%" style="font-size:0; line-height:0;">&nbsp;</td>
                       </tr>
@@ -233,7 +247,7 @@
                         <td width="50%" style="font-size:0; line-height:0;">&nbsp;</td>
                         <td align="center" bgcolor="#D6FF3D" style="background:#D6FF3D; background-image:linear-gradient(#D6FF3D,#D6FF3D); border-radius:999px; text-align:center;">
                           <a href="https://api.atomicbot.ai/auth/google" target="_blank" class="ink" style="display:inline-block; color:#0d0e12; font-family:Arial,Helvetica,sans-serif; font-size:26px; font-weight:800; text-decoration:none; padding:24px 56px; border-radius:999px; white-space:nowrap; line-height:1;">
-                            Run in Cloud &nbsp;&rarr;
+                            <span class="t-ink">Run in Cloud &nbsp;&rarr;</span>
                           </a>
                         </td>
                         <td width="50%" style="font-size:0; line-height:0;">&nbsp;</td>
@@ -249,10 +263,10 @@
           <tr>
             <td align="center" style="padding:28px 8px 8px; text-align:center;">
               <p class="g-gray" style="margin:0 0 4px; font-family:Arial,Helvetica,sans-serif; font-size:18px; line-height:1.6; color:#9aa3b5; text-align:center;">
-                Questions or feedback? Join our <a href="https://discord.gg/2TXafRV69m" target="_blank" class="g-gray" style="color:#9aa3b5; text-decoration:underline;">Discord</a> or email <a href="mailto:support@atomicbot.ai" class="g-gray" style="color:#9aa3b5; text-decoration:underline;">support@atomicbot.ai</a>
+                <span class="t-gray">Questions or feedback? Join our</span> <a href="https://discord.gg/2TXafRV69m" target="_blank" style="color:#9aa3b5; text-decoration:underline;"><span class="t-gray">Discord</span></a> <span class="t-gray">or email</span> <a href="mailto:support@atomicbot.ai" style="color:#9aa3b5; text-decoration:underline;"><span class="t-gray">support@atomicbot.ai</span></a>
               </p>
               <p class="g-gray" style="margin:0 0 18px; font-family:Arial,Helvetica,sans-serif; font-size:18px; color:#9aa3b5; text-align:center;">
-                Built by the Atomic Bot team &nbsp;&#9829;
+                <span class="t-gray">Built by the Atomic Bot team &nbsp;&#9829;</span>
               </p>
 
               <!-- Social icons -->
@@ -312,9 +326,9 @@
               </table>
 
               <p class="g-faint" style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#b0b7c3; text-align:center;">
-                <a href="https://atomicbot.ai/terms-of-service" target="_blank" class="g-faint" style="color:#b0b7c3; text-decoration:underline;">Terms of Service</a>
+                <a href="https://atomicbot.ai/terms-of-service" target="_blank" class="g-faint" style="color:#b0b7c3; text-decoration:underline;"><span class="t-faint">Terms of Service</span></a>
                 &nbsp;&middot;&nbsp;
-                <a href="#" class="g-faint" style="color:#b0b7c3; text-decoration:underline;">Unsubscribe</a>
+                <a href="#" class="g-faint" style="color:#b0b7c3; text-decoration:underline;"><span class="t-faint">Unsubscribe</span></a>
               </p>
             </td>
           </tr>
