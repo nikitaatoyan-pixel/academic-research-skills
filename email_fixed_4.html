@@ -32,23 +32,6 @@
     [data-ogsc] .ink-soft { color:#5a6373 !important; }
     [data-ogsc] .headline { border-color:#0d0e12 !important; color:#0d0e12 !important; }
 
-    /* Gmail iOS forced dark mode (emailmatrix.ru/blog/gmail-ios-dark-mode):
-       Gmail repaints plain colors but never gradients. Inside Gmail only
-       (u + .body), text is painted by a single-color gradient clipped to the
-       glyphs; the inner span carries no inline color so the rule wins. The
-       div > u + .body pair reverts the hack in Gmail Android, whose DOM
-       differs and where inversion behaves differently. */
-    @media only screen and (max-width:480px) {
-      u + .body .t-ink { background-clip:text; color:transparent; }
-      div > u + .body .t-ink { background-image:none; background-clip:inherit; color:#0d0e12; }
-      u + .body .t-soft { background-clip:text; color:transparent; }
-      div > u + .body .t-soft { background-image:none; background-clip:inherit; color:#5a6373; }
-      u + .body .t-gray { background-clip:text; color:transparent; }
-      div > u + .body .t-gray { background-image:none; background-clip:inherit; color:#9aa3b5; }
-      u + .body .t-faint { background-clip:text; color:transparent; }
-      div > u + .body .t-faint { background-image:none; background-clip:inherit; color:#b0b7c3; }
-    }
-
     @media only screen and (max-width:620px) {
       .container { width:100% !important; }
       .cardpad { padding-left:22px !important; padding-right:22px !important; }
