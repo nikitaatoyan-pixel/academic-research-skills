@@ -36,12 +36,6 @@
     [data-ogsc] .ink-soft { color:#5a6373 !important; }
     [data-ogsc] .headline { border-color:#0d0e12 !important; color:#0d0e12 !important; }
 
-    /* Gmail app (iOS/Android) dark mode: Gmail ignores color-scheme meta and
-       force-inverts colors. The `u + .body` selector only matches inside Gmail;
-       the two blend layers cancel Gmail's inversion so the email stays white. */
-    u + .body .gmail-blend-screen { background:#000000; mix-blend-mode:screen; }
-    u + .body .gmail-blend-difference { background:#000000; mix-blend-mode:difference; }
-
     @media only screen and (max-width:620px) {
       .container { width:100% !important; }
       .cardpad { padding-left:22px !important; padding-right:22px !important; }
@@ -54,9 +48,7 @@
 </head>
 <body class="body" style="margin:0; padding:0; background:#f2f3f5;" bgcolor="#f2f3f5">
 
-  <div class="gmail-blend-screen"><div class="gmail-blend-difference">
-
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f2f3f5" class="bg" style="background:#f2f3f5;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f2f3f5" class="bg" style="width:100%; min-width:100%; background:#f2f3f5;">
     <tr>
       <td align="center" style="padding:28px 16px 40px;">
         <!--[if mso]><table role="presentation" width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
@@ -325,8 +317,6 @@
       </td>
     </tr>
   </table>
-
-  </div></div>
 
 </body>
 </html>
