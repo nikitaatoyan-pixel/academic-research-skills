@@ -32,6 +32,15 @@
     [data-ogsc] .ink-soft { color:#5a6373 !important; }
     [data-ogsc] .headline { border-color:#0d0e12 !important; color:#0d0e12 !important; }
 
+    /* Theme-aware logo swap */
+    .logo-dark { display:none; }
+    @media (prefers-color-scheme: dark) {
+      .logo-light { display:none !important; }
+      .logo-dark { display:block !important; }
+    }
+    [data-ogsc] .logo-light { display:none !important; }
+    [data-ogsc] .logo-dark { display:block !important; }
+
     @media only screen and (max-width:620px) {
       .container { width:100% !important; }
       .cardpad { padding-left:22px !important; padding-right:22px !important; }
@@ -61,7 +70,8 @@
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto; Margin:0 auto;">
                       <tr>
                         <td align="center" style="text-align:center;">
-                          <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a6338c4dfb16996cdaedb25_logo%20black.png" width="260" alt="Atomic Bot" style="display:block; width:260px; height:auto; border:0;">
+                          <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a6338c4dfb16996cdaedb25_logo%20black.png" width="260" alt="Atomic Bot" class="logo-light" style="display:block; width:260px; height:auto; border:0;">
+                          <!--[if !mso]><!--><img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a638b78013a6f4832f2afb8_Logo%20white.png" width="260" alt="Atomic Bot" class="logo-dark" style="display:none; mso-hide:all; width:260px; height:auto; border:0;"><!--<![endif]-->
                         </td>
                       </tr>
                     </table>
@@ -181,13 +191,7 @@
                         <!-- Hermes -->
                         <td align="center" valign="top" width="48%" bgcolor="#f7f8fa" class="fbox" style="width:48%; padding:20px 12px 18px; background:#f7f8fa; border-radius:12px; text-align:center;">
                           <p class="ink" style="margin:0 0 12px; font-size:22px; line-height:1; color:#0d0e12; font-family:Arial,sans-serif; text-align:center;"><span class="t-ink">&#8595;</span></p>
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 12px;">
-                            <tr>
-                              <td align="center" valign="middle" style="padding:12px; background-image:url('https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a622cb45daa365c1389b385_Ellipse%20121.png'); background-size:60px 60px; background-repeat:no-repeat; background-position:center;">
-                                <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62309a16eb1bd53caa6f85_69d872396ebfa81ccdf1aa27_hermes-logo%201.png" width="36" height="36" alt="Hermes" style="display:block; width:36px; height:36px; border:0;">
-                              </td>
-                            </tr>
-                          </table>
+                          <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a638b785dc0a1b71c283d7a_Group%2095.png" width="60" height="60" alt="Hermes" style="display:inline-block; width:60px; height:60px; border:0; margin-bottom:12px;">
                           <p class="ink" style="margin:0; font-size:21px; font-weight:700; color:#0d0e12; font-family:Arial,Helvetica,sans-serif; text-align:center;"><span class="t-ink">Hermes</span></p>
                         </td>
                       </tr>
@@ -228,9 +232,9 @@
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
                         <td width="50%" style="font-size:0; line-height:0;">&nbsp;</td>
-                        <td align="center" bgcolor="#D6FF3D" class="btn-bg" style="background:#D6FF3D; border-radius:999px; text-align:center;">
-                          <a href="https://api.atomicbot.ai/auth/google" target="_blank" class="ink" style="display:inline-block; color:#0d0e12; font-family:Arial,Helvetica,sans-serif; font-size:26px; font-weight:800; text-decoration:none; padding:24px 56px; border-radius:999px; white-space:nowrap; line-height:1;">
-                            <span class="t-ink">Run in Cloud &nbsp;&rarr;</span>
+                        <td align="center" style="text-align:center;">
+                          <a href="https://api.atomicbot.ai/auth/google" target="_blank" style="display:block;">
+                            <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a638b78f5c76afe4d414ae0_Group%2097.png" width="320" alt="Run in Cloud" style="display:block; width:320px; height:auto; border:0;">
                           </a>
                         </td>
                         <td width="50%" style="font-size:0; line-height:0;">&nbsp;</td>
@@ -257,52 +261,27 @@
                 <tr>
                   <td style="padding:0 5px;">
                     <a href="https://x.com/atomicbot_ai" target="_blank">
-                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                          <td align="center" valign="middle" class="darkcell" bgcolor="#242424" style="background:#242424; border-radius:50%; padding:9px;"><img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281c1d056f9d576801e6_prime_twitter.png" width="18" height="18" alt="X" style="display:block; width:18px; height:18px; border:0;">
-                          </td>
-                        </tr>
-                      </table>
+                      <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a638b78d304595b334d7543_Group%2091.png" width="36" height="36" alt="X" style="display:block; width:36px; height:36px; border:0;">
                     </a>
                   </td>
                   <td style="padding:0 5px;">
                     <a href="https://discord.gg/2TXafRV69m" target="_blank">
-                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                          <td align="center" valign="middle" class="darkcell" bgcolor="#242424" style="background:#242424; border-radius:50%; padding:9px;"><img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281cc752613eb179acad_ic_baseline-discord.png" width="18" height="18" alt="Discord" style="display:block; width:18px; height:18px; border:0;">
-                          </td>
-                        </tr>
-                      </table>
+                      <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a638b78a2641672e10e6ad8_Group%2096.png" width="36" height="36" alt="Discord" style="display:block; width:36px; height:36px; border:0;">
                     </a>
                   </td>
                   <td style="padding:0 5px;">
                     <a href="https://github.com/AtomicBot-ai/atomic-agent" target="_blank">
-                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                          <td align="center" valign="middle" class="darkcell" bgcolor="#242424" style="background:#242424; border-radius:50%; padding:9px;"><img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281c22bea3995542b7e7_mdi_github.png" width="18" height="18" alt="GitHub" style="display:block; width:18px; height:18px; border:0;">
-                          </td>
-                        </tr>
-                      </table>
+                      <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a638b78013a6f4832f2afb2_Group%2093.png" width="36" height="36" alt="GitHub" style="display:block; width:36px; height:36px; border:0;">
                     </a>
                   </td>
                   <td style="padding:0 5px;">
                     <a href="https://www.linkedin.com/company/atomicbot/" target="_blank">
-                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                          <td align="center" valign="middle" class="darkcell" bgcolor="#242424" style="background:#242424; border-radius:50%; padding:9px;"><img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281c22bea3995542b7ec_mdi_linkedin.png" width="18" height="18" alt="LinkedIn" style="display:block; width:18px; height:18px; border:0;">
-                          </td>
-                        </tr>
-                      </table>
+                      <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a638b7870f259ab0a5ea426_Group%2094.png" width="36" height="36" alt="LinkedIn" style="display:block; width:36px; height:36px; border:0;">
                     </a>
                   </td>
                   <td style="padding:0 5px;">
                     <a href="https://www.facebook.com/people/Atomic-Bot-AI/61587265870765/" target="_blank">
-                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                          <td align="center" valign="middle" class="darkcell" bgcolor="#242424" style="background:#242424; border-radius:50%; padding:9px;"><img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a62281c8bdedd1085a9429e_ic_baseline-facebook.png" width="18" height="18" alt="Facebook" style="display:block; width:18px; height:18px; border:0;">
-                          </td>
-                        </tr>
-                      </table>
+                      <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a638b78a74a15447fa87a7b_Group%2092.png" width="36" height="36" alt="Facebook" style="display:block; width:36px; height:36px; border:0;">
                     </a>
                   </td>
                 </tr>
