@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="x-apple-disable-message-reformatting">
-  <meta name="color-scheme" content="light only">
-  <meta name="supported-color-schemes" content="light only">
+  <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
   <title>Atomic Bot — Your Agent Is Waiting</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; padding:0; background:#f2f3f5; }
+    body { margin:0; padding:0; background:#ffffff; }
     a { text-decoration:none; }
-    /* Force the LIGHT look in every client, including dark-mode ones.
-       "light only" tells the client: never build a dark variant of this email. */
-    :root { color-scheme: light only; supported-color-schemes: light only; }
     body, table, td, a { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
     table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; }
     img { -ms-interpolation-mode:bicubic; border:0; }
 
     /* Re-assert the light palette in clients that theme via media query */
     @media (prefers-color-scheme: dark) {
-      body, .bg { background:#f2f3f5 !important; }
+      body, .bg { background:#ffffff !important; }
       .card { background:#ffffff !important; }
       .darkcell { background:#0d0e12 !important; }
       .ink { color:#0d0e12 !important; }
@@ -29,21 +25,12 @@
       .headline { border-color:#0d0e12 !important; color:#0d0e12 !important; }
     }
     /* Outlook.com / Outlook apps dark mode */
-    [data-ogsb] body, [data-ogsb] .bg { background:#f2f3f5 !important; }
+    [data-ogsb] body, [data-ogsb] .bg { background:#ffffff !important; }
     [data-ogsb] .card { background:#ffffff !important; }
     [data-ogsb] .darkcell { background:#0d0e12 !important; }
     [data-ogsc] .ink { color:#0d0e12 !important; }
     [data-ogsc] .ink-soft { color:#5a6373 !important; }
     [data-ogsc] .headline { border-color:#0d0e12 !important; color:#0d0e12 !important; }
-
-    /* Gmail app (iOS/Android) ignores the color-scheme meta and force-inverts
-       light emails. The `u + .body` selector matches only inside Gmail; the two
-       blend layers cancel that inversion so the email keeps its real colors.
-       Scoped to phone widths so Gmail desktop layout is untouched. */
-    @media only screen and (max-width:700px) {
-      u + .body .gmail-blend-screen { background:#000000 !important; mix-blend-mode:screen; }
-      u + .body .gmail-blend-difference { background:#000000 !important; mix-blend-mode:difference; }
-    }
 
     @media only screen and (max-width:620px) {
       .container { width:100% !important; }
@@ -55,11 +42,11 @@
     }
   </style>
 </head>
-<body class="body" style="margin:0; padding:0; background:#f2f3f5;" bgcolor="#f2f3f5">
+<body class="body" style="margin:0; padding:0; background:#ffffff;">
 
-  <div class="gmail-blend-screen" style="width:100%; min-width:100%;"><div class="gmail-blend-difference" style="width:100%; min-width:100%;">
+  <div style="display:none; overflow:hidden; line-height:1px; opacity:0; max-height:0; max-width:0;">Welcome to AtomicBot &mdash; the easiest way to run AI agents&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
 
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f2f3f5" class="bg" style="width:100%; min-width:100%; background:#f2f3f5;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" class="bg" style="width:100%; min-width:100%; background:#ffffff;">
     <tr>
       <td align="center" style="padding:28px 16px 40px;">
         <!--[if mso]><table role="presentation" width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
@@ -328,8 +315,6 @@
       </td>
     </tr>
   </table>
-
-  </div></div>
 
 </body>
 </html>
