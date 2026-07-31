@@ -48,6 +48,11 @@
       .fighter-wrap { display:block !important; width:100% !important; }
       .fighter-card { display:block !important; width:90% !important; margin:0 auto 10px !important; }
       .fighter-spacer { display:none !important; }
+      /* Thank-you card click-zones scale down proportionally on phones */
+      .zone-call  { height:311px !important; }
+      .zone-call a  { height:311px !important; }
+      .zone-email { height:58px !important; }
+      .zone-email a { height:58px !important; }
     }
   </style>
 </head>
@@ -75,12 +80,29 @@
 
           
 
-          <!-- ===== BLOCK 2: Thank you (single image, linked to Calendly) ===== -->
+          <!-- ===== BLOCK 2: Thank you (single image, two click zones: call + email) ===== -->
           <tr>
-            <td align="center" style="text-align:center;">
-              <a href="https://calendly.com/kristina-atomicbot/30min" target="_blank" style="display:block;">
-                <img src="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a6b29e9fc26b31dfa7f1a68_Group%202131328894.jpg" width="600" alt="We're glad you chose us — book a call" style="display:block; width:100%; max-width:600px; height:auto; border:0; margin:0 auto; Margin:0 auto; border-radius:20px;">
-              </a>
+            <td class="thankyoubox" background="https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a6b29e9fc26b31dfa7f1a68_Group%202131328894.jpg" style="background-image:url('https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/6a6b29e9fc26b31dfa7f1a68_Group%202131328894.jpg'); background-size:100% 100%; background-repeat:no-repeat; border-radius:20px; overflow:hidden;">
+              <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"><tr><td height="518"><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <!-- Zone 1: everything down to the bottom of the "Book a call" button -->
+                <tr>
+                  <td class="zone-call" style="font-size:0; line-height:0;">
+                    <a href="https://calendly.com/kristina-atomicbot/30min" target="_blank" style="display:block; height:518px; font-size:0; line-height:0;">&nbsp;</a>
+                  </td>
+                </tr>
+              </table>
+              <!--[if mso]></td></tr></table><![endif]-->
+              <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"><tr><td height="96"><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <!-- Zone 2: bottom strip — "Your personal manager..." line -->
+                <tr>
+                  <td class="zone-email" style="font-size:0; line-height:0;">
+                    <a href="mailto:kristina@atomic.ai" style="display:block; height:96px; font-size:0; line-height:0;">&nbsp;</a>
+                  </td>
+                </tr>
+              </table>
+              <!--[if mso]></td></tr></table><![endif]-->
             </td>
           </tr>
 
